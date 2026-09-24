@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-// QVAC Fake Lost Pet Flyer Generator — GUI mode.
+// WantedGen AI — GUI mode.
 
 import http from "node:http";
 import fs from "node:fs";
@@ -63,7 +63,7 @@ async function main() {
   });
 
   server.listen(PORT, () => {
-    console.log(`▸ QVAC Fake Lost Pet Flyer Generator GUI ready at http://localhost:${PORT}`);
+    console.log(`▸ WantedGen AI GUI ready at http://localhost:${PORT}`);
   });
 
   const shutdown = async () => {

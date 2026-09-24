@@ -1,5 +1,5 @@
 {
-  "name": "qvac-fake-lost-pet-flyer-generator",
+  "name": "wantedgenai",
   "version": "1.0.0",
   "description": "Type a pet's personality and an on-device AI writes a heartfelt lost pet flyer description for it, with a deterministic worry meter.",
   "type": "module",
