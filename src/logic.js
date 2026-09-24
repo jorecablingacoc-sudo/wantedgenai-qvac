@@ -1,4 +1,4 @@
-// QVAC Fake Lost Pet Flyer Generator — core logic.
+// WantedGen AI — core logic.
 // completion() writes the result from a single user input field.
 // The worry meter is a deterministic score from keyword density
 // and length — never the model rating its own writing.
@@ -20,7 +20,7 @@ function looksUnusable(text) {
   return bad.some((phrase) => lower.includes(phrase));
 }
 
-const FALLBACK = (v) => `Missing: a beloved pet who is ${v}. Please check your yard and call if seen. Reward offered.`;
+const FALLBACK = (v) => `Missing: a fictional character who is ${v}. Please check your yard and call if seen. Reward offered.`;
 
 export async function generate(modelId, input) {
   const run = completion({
@@ -28,7 +28,7 @@ export async function generate(modelId, input) {
     history: [
       {
         role: "system",
-        content: ((v) => `Write one short, heartfelt fake lost pet flyer description (1-2 sentences) for a pet with this personality: ${v}. Reply with ONLY the description, no preamble.`)(input),
+        content: ((v) => `Write one short, funny fictional wanted poster description (1-2 sentences) for a character with these traits: ${v}. Reply with ONLY the wanted poster description, no preamble.`)(input),
       },
       { role: "user", content: `Input: ${input}` },
     ],
